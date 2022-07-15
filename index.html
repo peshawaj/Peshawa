@@ -9,8 +9,11 @@
     <style>
         .fa-heart {
             font-size: 25px;
-            -webkit-animation: like 0.5 linear;
-            animation: like 0.5 linear;
+        }
+        
+        .animate {
+            -webkit-animation: like 0.4s linear;
+            animation: like 0.4s linear;
         }
         
         @-webkit-keyframes like {
@@ -50,6 +53,7 @@
             icon.classList.toggle("fa-solid");
             icon.classList.toggle("fa-regular");
             icon.classList.contains("fa-solid") ? icon.style.color = "red" : icon.style.color = "black";
+            icon.classList.toggle("animate");
         }
     </script>
 </body>
