@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d751c8c0ed.js" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        .fa-heart {
+            font-size: 25px;
+            -webkit-animation: like 0.5 linear;
+            animation: like 0.5 linear;
+        }
+        
+        @-webkit-keyframes like {
+            0% {
+                -webkit-transform: scale(1)
+            }
+            50% {
+                -webkit-transform: scale(1.5)
+            }
+            100% {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes like {
+            0% {
+                transform: scale(1)
+            }
+            50% {
+                transform: scale(1.5)
+            }
+            100% {
+                transform: scale(1)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" onclick="like(this)">
+        <i class="fa-regular fa-heart" id="heart"></i>
+        <span></span>
+    </div>
+    <script>
+        function like(a) {
+            var icon = a.querySelector("i");
+            icon.classList.toggle("fa-solid");
+            icon.classList.toggle("fa-regular");
+            icon.classList.contains("fa-solid") ? icon.style.color = "red" : icon.style.color = "black";
+        }
+    </script>
+</body>
+
+</html>
